@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Memoory Game</title>
+    <link rel="stylesheet" href="/Css/styles.css">
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="container">
+            <div id="moves-count"></div>
+            <div id="time"></div>
+        </div>
+        <div class="game__container"></div>
+        <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="control__container">
+        <p id="result"></p>
+        <button id="start">Start Game</button>
+    </div>
+
+    <script src="JS/game.js"></script>
 </body>
 </html>

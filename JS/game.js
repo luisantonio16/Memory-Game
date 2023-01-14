@@ -26,6 +26,9 @@ const items =[
     {name:"Snorlax",image:"/Assets/Snorlax.svg"},
     {name:"Psyduck",image:"/Assets/Psyduck.svg"},
     {name:"superball",image:"/Assets/superball.svg"},
+    {name:"women",image:"/Assets/women.svg"},
+    {name:"flash",image:"/Assets/flash.svg"},
+    {name:"joker",image:"/Assets/joker.svg"},
 ];
 
 let seconds =0,
@@ -121,7 +124,7 @@ const matrixGenerator = (cardValues, size=4) =>{
                         winCunt +=1;
 
                         if(winCunt == Math.floor(cardValues.length / 2)){
-                            result.innerHTML=`<h2>You Wins</h2>
+                            result.innerHTML =`<h2>You Wins</h2>
                             <h4>Moves: ${movesCount}</h4>                         
                             `;
                             stopGame();
@@ -149,7 +152,7 @@ const matrixGenerator = (cardValues, size=4) =>{
 };
 
 const initializer = () =>{
-    result.innerText = "";
+    result.innerHTML = "";
     winCunt= 0;
     let cardValues = generateRadom();
     matrixGenerator(cardValues);
@@ -158,7 +161,7 @@ const initializer = () =>{
 //start game
 startButton.addEventListener("click",()=>{
     movesCount = 0;
-    result = 0;
+    timevalues = 0;
 
     controls.classList.add("hide");
     stopButton.classList.add("hide");
@@ -177,7 +180,6 @@ stopButton.addEventListener("click",(stopGame =()=>{
     controls.classList.remove("hide");
     stopButton.classList.add("hide");
     startButton.classList.remove("hide");
-
     clearInterval(interval);
 })
 );
